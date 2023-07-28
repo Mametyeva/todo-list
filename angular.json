@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/todo-list/",
             "outputPath": "dist/first-ang",
             "index": "src/index.html",
             "main": "src/main.ts",
