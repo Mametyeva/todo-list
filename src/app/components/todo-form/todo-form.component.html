@@ -1,0 +1,18 @@
+<div class="text-center">
+<h2>Лист задач</h2>
+<form (submit)="addItem(inputItem.value)" class="text-center my-5">
+    <div class="form-group">
+        <input type="text" id="inputItem" #inputItem placeholder="Что планируете сделать?" class="form-control my-3">
+        <button type="submit" class="btn btn-success px-5">Добавить</button>
+    </div>
+</form>
+<div class="list">
+    <p *ngIf="checkList()" class="text-center text-secondary">Ваш лист задач пуст</p>
+    <ul class="list-group list-group-flush">
+        <li *ngFor="let i of items" class="list-group-item d-flex align-items-center">
+            <p class="m-0">{{ i }}</p>
+            <button (click)="deleteItem($event, i)" type="button" class="btn-close" aria-label="Закрыть"></button>
+        </li>
+    </ul>
+</div>
+</div>
